@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "7n8BMBkUgslokk2Bfd9E8ZNBhnzKYUVQ431ldLSYZzLxSkI3dNiR4jQXxQp/sCm/Ukphw7F7OyNOo6nWp6yvcw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jackc\\OneDrive\\Documents\\Dev\\Weird Quote Generator\\main.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jackc\\.nuget\\packages\\json.net\\1.0.33\\json.net.1.0.33.nupkg.sha512",
+    "C:\\Users\\jackc\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
