@@ -10,14 +10,16 @@ using Newtonsoft.Json.Linq;
 
 class Program {
     public static void Main(string[] args) {
-        Console.WriteLine("=======================");
         Quote q = GetQuoteAsync().Result;
-        Console.WriteLine(q.content + " - " + q.author);
-
         Quote q2 = GetQuoteAsync().Result;
-        Console.WriteLine(q2.content + " - " + q2.author);
         
-        Console.WriteLine("\n\n=======================\n");
+        if(args.Length > 0 && args[0] == "f") {
+            Console.WriteLine("=======================");
+            Console.WriteLine(q.content + " - " + q.author);
+            Console.WriteLine(q2.content + " - " + q2.author);
+        }
+        
+        Console.WriteLine("\n=======================\n");
         Console.Write(q.SplitAtRandom(true));
         Console.WriteLine(" " + q2.SplitAtRandom(false));
         int random = new Random().Next(0, 3);
