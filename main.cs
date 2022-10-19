@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-
 class Program {
     public static void Main(string[] args) {
         Quote q = GetQuoteAsync().Result;
