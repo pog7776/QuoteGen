@@ -9,30 +9,34 @@ using Newtonsoft.Json.Linq;
 
 class Program {
     public static void Main(string[] args) {
-        Quote q = GetQuoteAsync().Result;
-        Quote q2 = GetQuoteAsync().Result;
-        
-        if(args.Length > 0 && args[0] == "f") {
-            Console.WriteLine("=======================");
-            Console.WriteLine(q.content + " - " + q.author);
-            Console.WriteLine(q2.content + " - " + q2.author);
+        while(true) {
+            Console.WriteLine("Generating");
+            Quote q = GetQuoteAsync().Result;
+            Quote q2 = GetQuoteAsync().Result;
+            
+            if(args.Length > 0 && args[0] == "f") {
+                Console.WriteLine("=======================");
+                Console.WriteLine(q.content + " - " + q.author);
+                Console.WriteLine(q2.content + " - " + q2.author);
+            }
+            
+            Console.WriteLine("\n\n=======================\n");
+            Console.Write(q.SplitAtRandom(true));
+            Console.WriteLine(" " + q2.SplitAtRandom(false));
+            int random = new Random().Next(0, 3);
+            //Console.WriteLine(random);
+            if(random == 0) {
+                Console.WriteLine("- " + q.author);
+            } else if(random == 1) {
+                Console.WriteLine("- " + q2.author);
+            } else {
+                Console.WriteLine("- " + q.author + " and " + q2.author);
+            }
+            Console.WriteLine("\n=======================\n");
+            Console.WriteLine("Press any key to generate another.");
+            Console.ReadKey();
+            Console.WriteLine();
         }
-        
-        Console.WriteLine("\n=======================\n");
-        Console.Write(q.SplitAtRandom(true));
-        Console.WriteLine(" " + q2.SplitAtRandom(false));
-        int random = new Random().Next(0, 3);
-        //Console.WriteLine(random);
-        if(random == 0) {
-            Console.WriteLine("- " + q.author);
-        } else if(random == 1) {
-            Console.WriteLine("- " + q2.author);
-        } else {
-            Console.WriteLine("- " + q.author + " and " + q2.author);
-        }
-        Console.WriteLine("\n=======================\n");
-        Console.WriteLine("Press any key to exit.");
-        Console.ReadKey();
     }
 
     public static async Task<Quote> GetQuoteAsync() {
