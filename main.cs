@@ -54,10 +54,9 @@ class Program {
         using (var response = await client.SendAsync(request))
         {            
             response.EnsureSuccessStatusCode();
-            //var body = await response.Content.ReadAsStringAsync();
-            var result = await response.Content.ReadAsStringAsync();
-            var jsonData = (JObject)JsonConvert.DeserializeObject(result);
-            var message = jsonData["content"].Value<string>();
+            string result = await response.Content.ReadAsStringAsync();
+            // var jsonData = (JObject)JsonConvert.DeserializeObject(result);
+            // var message = jsonData["content"].Value<string>();
 
             //Console.WriteLine(message);
             //return message;
