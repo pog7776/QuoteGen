@@ -1,0 +1,2 @@
+C:\Users\jackc\OneDrive\Documents\Dev\Weird Quote Generator\bin\Release\netcoreapp6.0\publish\win-x86\main.pdb
+C:\Users\jackc\OneDrive\Documents\Dev\Weird Quote Generator\bin\Release\netcoreapp6.0\publish\win-x86\main.exe
