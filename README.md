@@ -1,0 +1,2 @@
+# QuoteGen
+Lovely quote generator
